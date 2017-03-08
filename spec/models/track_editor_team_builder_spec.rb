@@ -29,8 +29,10 @@ describe TrackEditorTeamBuilder do
         expect(team.id).to eq 2222222
       end
 
-      it "builds a team with member names" do
-        expect(team.member_names).to match_array ["teacher", "instructor"]
+      describe "building a team with member names" do
+        it "ignores members of the curriculum team" do
+          expect(team.member_names).to match_array ["teacher", "instructor"]
+        end
       end
     end
   end

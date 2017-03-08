@@ -1,5 +1,7 @@
 class TrackEditorTeamBuilder
   TRACK_EDITOR_TEAM_NAME_MATCHER = /\Atrack\-editors\-for/
+  CURRICULUM_TEAM = ["sgharms", "toreyhickman"]
+
 
   def initialize(org_name, client = GithubClient)
     @org_name = org_name
@@ -26,7 +28,7 @@ class TrackEditorTeamBuilder
     TrackEditorTeam.new({
       :name         => extract_name(team_data),
       :id           => extract_id(team_data),
-      :member_names => get_member_names(extract_id(team_data))
+      :member_names => non_curriculum_member_names(extract_id(team_data))
     })
   end
 
@@ -38,7 +40,11 @@ class TrackEditorTeamBuilder
     team_data["id"]
   end
 
-  def get_member_names(team_id)
+  def non_curriculum_member_names(team_id)
+    member_names(team_id) - CURRICULUM_TEAM
+  end
+
+  def member_names(team_id)
     client.fetch_members(team_id).map { |member_data| extract_member_name(member_data) }
   end
 
