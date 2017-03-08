@@ -20,16 +20,5 @@
     "members_url": "https://api.github.com/teams/2222222/members{/member}",
     "repositories_url": "https://api.github.com/teams/2222222/repos",
     "permission": "pull"
-  },
-  {
-    "name": "track-editors-for-something-else",
-    "id": 333333,
-    "slug": "track-editors-for-something-else",
-    "description": "track-editors-for-something-else",
-    "privacy": "closed",
-    "url": "https://api.github.com/teams/333333",
-    "members_url": "https://api.github.com/teams/333333/members{/member}",
-    "repositories_url": "https://api.github.com/teams/333333/repos",
-    "permission": "pull"
   }
 ]

@@ -36,24 +36,5 @@
     "received_events_url": "https://api.github.com/users/instructor/received_events",
     "type": "User",
     "site_admin": false
-  },
-  {
-    "login": "sgharms",
-    "id": 345678,
-    "avatar_url": "https://avatars2.githubusercontent.com/u/345678?v=3",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/sgharms",
-    "html_url": "https://github.com/sgharms",
-    "followers_url": "https://api.github.com/users/sgharms/followers",
-    "following_url": "https://api.github.com/users/sgharms/following{/other_user}",
-    "gists_url": "https://api.github.com/users/sgharms/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/sgharms/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/sgharms/subscriptions",
-    "organizations_url": "https://api.github.com/users/sgharms/orgs",
-    "repos_url": "https://api.github.com/users/sgharms/repos",
-    "events_url": "https://api.github.com/users/sgharms/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/sgharms/received_events",
-    "type": "User",
-    "site_admin": false
   }
 ]
