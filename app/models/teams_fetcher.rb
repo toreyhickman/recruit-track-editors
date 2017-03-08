@@ -13,6 +13,6 @@ module TeamsFetcher
   def self.build_headers(org_name)
     { "Accept" => "application/vnd.github.v3+json",
       "Authorization" => "token #{ENV["GITHUB_TOKEN"]}",
-      "User-Agent"    => org_name }
+      "User-Agent"    => "#{APP_NAME} (Ruby)" }
   end
 end
