@@ -20,4 +20,33 @@ describe TrackEditorTeam do
       expect(team.member_names).to eq ["name", "other_name"]
     end
   end
+
+  describe "needing members" do
+    context "when it has two members" do
+      it "does not need members" do
+        expect(team.need_members?).to be false
+      end
+    end
+
+    context "when it has less than two members" do
+      let(:team_data) do
+        { name: "track-editors-for-something", id: 1234567, member_names: ["name"] }
+      end
+
+      it "needs members" do
+        expect(team.need_members?).to be true
+      end
+    end
+
+    context "when it has more than two members" do
+      let(:team_data) do
+        { name: "track-editors-for-something", id: 1234567, member_names: ["name", "other_name", "yet_another_name"] }
+      end
+
+      it "does not need members" do
+        expect(team.need_members?).to be false
+      end
+    end
+
+  end
 end
