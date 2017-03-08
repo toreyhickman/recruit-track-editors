@@ -2,9 +2,7 @@ require_relative "../spec_helper"
 
 describe TrackEditorTeam do
   let(:team_data) do
-    { :name    => "track-editors-for-something",
-      :id      => 1234567,
-      :members => ["member", "other_member"] }
+    { name: "track-editors-for-something", id: 1234567, member_names: ["name", "other_name"] }
   end
 
   let(:team) { TrackEditorTeam.new(team_data) }
@@ -18,8 +16,8 @@ describe TrackEditorTeam do
       expect(team.name).to eq "track-editors-for-something"
     end
 
-    it "has members" do
-      expect(team.members).to eq ["member", "other_member"]
+    it "has a list it member's names" do
+      expect(team.member_names).to eq ["name", "other_name"]
     end
   end
 end
