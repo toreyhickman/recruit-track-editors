@@ -1,5 +1,6 @@
 class TrackEditorTeam
   DESIRED_MINIMUM_MEMBER_COUNT = 2
+  CURRICULUM_MEMBERS = ["sgharms", "toreyhickman"]
 
   attr_reader :id, :name, :member_names
 
@@ -10,6 +11,12 @@ class TrackEditorTeam
   end
 
   def need_members?
-    member_names.count < DESIRED_MINIMUM_MEMBER_COUNT
+    non_curriculum_members.count < DESIRED_MINIMUM_MEMBER_COUNT
+  end
+
+  private
+
+  def non_curriculum_members
+    member_names - CURRICULUM_MEMBERS
   end
 end

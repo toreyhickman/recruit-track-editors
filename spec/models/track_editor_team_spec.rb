@@ -48,5 +48,14 @@ describe TrackEditorTeam do
       end
     end
 
+    context "when a curriculum partner is a member" do
+      let(:team_data) do
+        { name: "track-editors-for-something", id: 1234567, member_names: ["name", TrackEditorTeam::CURRICULUM_MEMBERS.first] }
+      end
+
+      it "does not count curriculum partners toward having enough members" do
+        expect(team.need_members?).to be true
+      end
+    end
   end
 end
