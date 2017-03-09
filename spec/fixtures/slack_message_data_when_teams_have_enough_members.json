@@ -1,0 +1,18 @@
+{
+  "channel": "#channel",
+  "text": "Announcement",
+  "attachments": [
+    {
+      "color": "#36a64f",
+      "title": "track-editors-for-something",
+      "title_link": "https://github.com/orgs/some_org/teams/track-editors-for-something",
+      "text": "editors: teacher, instructor"
+    },
+    {
+      "color": "#36a64f",
+      "title": "track-editors-for-other-thing",
+      "title_link": "https://github.com/orgs/some_org/teams/track-editors-for-other-thing",
+      "text": "editors: other-teacher, other-instructor"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "channel": "#channel",
+  "text": "Announcement",
+  "attachments": [
+    {
+      "color": "#dd0000",
+      "title": "track-editors-for-another-thing",
+      "title_link": "https://github.com/orgs/some_org/teams/track-editors-for-another-thing",
+      "text": "editors:"
+    }
+  ]
+}
