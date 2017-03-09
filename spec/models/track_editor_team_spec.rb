@@ -2,7 +2,7 @@ require_relative "../spec_helper"
 
 describe TrackEditorTeam do
   let(:team_data) do
-    { name: "track-editors-for-something", id: 1234567, member_names: ["name", "other_name"] }
+    { name: "track-editors-for-something", id: 1234567, url: "https://github.com/some/path", member_names: ["name", "other_name"] }
   end
 
   let(:team) { TrackEditorTeam.new(team_data) }
@@ -14,6 +14,10 @@ describe TrackEditorTeam do
 
     it "has a name" do
       expect(team.name).to eq "track-editors-for-something"
+    end
+
+    it "has a url" do
+      expect(team.url).to eq "https://github.com/some/path"
     end
 
     it "has a list it member's names" do

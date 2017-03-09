@@ -29,6 +29,10 @@ describe TrackEditorTeamBuilder do
         expect(team.id).to eq 2222222
       end
 
+      it "builds a team with a url" do
+        expect(team.url).to eq "https://github.com/#{org_name}/teams/track-editors-for-something"
+      end
+
       describe "building a team with member names" do
         it "ignores members of the curriculum team" do
           expect(team.member_names).to match_array ["teacher", "instructor"]

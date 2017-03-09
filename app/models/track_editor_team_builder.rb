@@ -28,6 +28,7 @@ class TrackEditorTeamBuilder
     TrackEditorTeam.new({
       :name         => extract_name(team_data),
       :id           => extract_id(team_data),
+      :url          => build_url(team_data),
       :member_names => non_curriculum_member_names(extract_id(team_data))
     })
   end
@@ -38,6 +39,10 @@ class TrackEditorTeamBuilder
 
   def extract_id(team_data)
     team_data["id"]
+  end
+
+  def build_url(team_data)
+    "https://github.com/#{org_name}/teams/#{extract_name(team_data)}"
   end
 
   def non_curriculum_member_names(team_id)
