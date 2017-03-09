@@ -1,6 +1,7 @@
 {
   "channel": "#channel",
   "text": "Announcement",
+  "as_user": true,
   "attachments": [
     {
       "color": "#36a64f",

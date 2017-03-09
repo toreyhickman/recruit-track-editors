@@ -7,6 +7,7 @@ module Slack
     def self.parse_message_from_teams(teams, channel, text = DEFAULT_TEXT)
       { :channel     => channel,
         :text        => text,
+        :as_user     => true,
         :attachments => build_attachments(teams)
         }
     end
