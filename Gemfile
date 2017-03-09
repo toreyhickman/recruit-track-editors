@@ -7,3 +7,4 @@ gem "rake"
 gem "dotenv"
 gem "httparty"
 gem "webmock"
+gem 'slack-ruby-client', '0.7.9'
