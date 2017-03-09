@@ -30,7 +30,7 @@ describe TrackEditorTeamBuilder do
       end
 
       it "builds a team with a url" do
-        expect(team.url).to eq "https://github.com/#{org_name}/teams/track-editors-for-something"
+        expect(team.url).to eq "https://github.com/orgs/#{org_name}/teams/track-editors-for-something"
       end
 
       describe "building a team with member names" do

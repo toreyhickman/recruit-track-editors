@@ -42,7 +42,7 @@ class TrackEditorTeamBuilder
   end
 
   def build_url(team_data)
-    "https://github.com/#{org_name}/teams/#{extract_name(team_data)}"
+    "https://github.com/orgs/#{org_name}/teams/#{extract_name(team_data)}"
   end
 
   def non_curriculum_member_names(team_id)
