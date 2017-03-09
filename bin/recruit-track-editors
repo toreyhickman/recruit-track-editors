@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require File.expand_path("../../config/environment", __FILE__)
+
+ORG_NAME = "devbootcamp-curriculum"
+CHANNEL  = "#bot-testing"
+
+client       = Slack::Web::Client.new
+team_builder = TrackEditorTeamBuilder.new(ORG_NAME)
+teams        = team_builder.build_teams
+message_data = Slack::MessageParser.parse_message_from_teams(teams, CHANNEL)
+
+client.chat_postMessage(message_data)
