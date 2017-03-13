@@ -3,7 +3,7 @@
 require File.expand_path("../../config/environment", __FILE__)
 
 ORG_NAME = "devbootcamp-curriculum"
-CHANNEL  = "#bot-testing"
+CHANNEL  = "#teachers"
 
 client       = Slack::Web::Client.new
 team_builder = TrackEditorTeamBuilder.new(ORG_NAME)
