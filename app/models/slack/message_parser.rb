@@ -1,6 +1,6 @@
 module Slack
   module MessageParser
-    DEFAULT_TEXT = "These are our current track editor teams.  We'd like to have at least two teachers serving on each track."
+    DEFAULT_TEXT = "These are our current track editor teams and their editors from outside curriculum.  We'd like to have at least two non-curriculum partners serving on each track. If you'd like to sign up to be a track editor, click the link to a team's page and join."
     GREEN = "#36a64f"
     RED   = "#dd0000"
 
